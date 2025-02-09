@@ -41,24 +41,90 @@
             height: auto;
         }
 
+        /* Menú de navegación */
         nav {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
+            align-items: center;
             background-color: #9bcfa4;
+            padding: 10px 20px;
+            position: relative;
         }
 
-        nav a {
-            color: rgb(0, 0, 0);
-            padding: 14px 20px;
+        /* Botones del menú */
+        .nav-links {
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-links a {
+            color: black;
+            padding: 10px 15px;
             text-decoration: none;
-            text-align: center;
             font-weight: bold;
+            text-align: center;
+            transition: background-color 0.3s ease;
         }
 
-        nav a:hover {
+        .nav-links a:hover {
             background-color: #b88383;
+            border-radius: 5px;
         }
 
+        /* Menú hamburguesa (oculto por defecto) */
+        .menu-icon {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-icon .line {
+            width: 25px;
+            height: 3px;
+            background-color: black;
+            margin: 4px 0;
+            transition: all 0.3s ease;
+        }
+
+        /* Estilos para pantallas pequeñas */
+        @media (max-width: 768px) {
+            /* Ocultar los botones del menú */
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #9bcfa4;
+                padding: 10px 0;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            /* Mostrar el ícono del menú hamburguesa */
+            .menu-icon {
+                display: flex;
+            }
+
+            /* Animación del ícono de hamburguesa */
+            .menu-icon.active .line:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .menu-icon.active .line:nth-child(2) {
+                opacity: 0;
+            }
+
+            .menu-icon.active .line:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+        }
+
+        /* Resto de los estilos (secciones, footer, etc.) */
         section {
             padding: 20px;
             margin: 20px;
@@ -118,10 +184,20 @@
 
     <!-- Menú de Navegación -->
     <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#propuestas">Propuestas</a>
-        <a href="#formula">Compañeros de Fórmula</a>
-        <a href="#contacto">Contacto</a>
+        <!-- Ícono del menú hamburguesa -->
+        <div class="menu-icon" id="menu-icon">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <!-- Botones del menú -->
+        <div class="nav-links" id="nav-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#propuestas">Propuestas</a>
+            <a href="#formula">Compañeros de Fórmula</a>
+            <a href="#redes">Nuestras Redes</a>
+            <a href="#contacto">Contacto</a>
+        </div>
     </nav>
 
     <!-- Sección Inicio -->
@@ -238,6 +314,11 @@
         </ul>
     </section>
 
+    <section id="Redes">
+        <h2>Nuestras Redes 📱 </h2>
+        <p>Proximamente...</p>
+    </section>
+
     <!-- Sección Contacto -->
     <section id="contacto">
         <h2>Contacto 📩</h2>
@@ -262,5 +343,23 @@
         <p>&copy; 2025 Terna de Personería Estudiantil #04. Todos los derechos reservados.</p>
     </footer>
 
+    <!-- Script para el menú hamburguesa -->
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.getElementById('nav-links');
+
+        menuIcon.addEventListener('click', () => {
+            menuIcon.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Cerrar el menú al hacer clic en un enlace
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuIcon.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
