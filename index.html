@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terna #04</title>
+    <link rel="icon" type="image/png" href="ruta/a/tu/logo.png">
     <!-- Importar la fuente Montserrat desde Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -24,6 +25,20 @@
             text-align: center;
             font-weight: bold;
             text-transform: uppercase;
+        }
+
+        /* Contenedor flexible para el título y los logos */
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px; /* Espacio entre el logo y el título */
+        }
+
+        /* Estilo para los logos */
+        .header-logo {
+            width: 50px; /* Ajusta el tamaño del logo */
+            height: auto;
         }
 
         nav {
@@ -90,7 +105,14 @@
 
     <!-- Encabezado -->
     <header>
-        <h1>Terna #04</h1>
+        <div class="header-container">
+            <!-- Logo a la izquierda -->
+            <img src="logo.png" alt="Logo" class="header-logo">
+            <!-- Título -->
+            <h1>Terna #04</h1>
+            <!-- Logo a la derecha -->
+            <img src="logo.png" alt="Logo" class="header-logo">
+        </div>
         <p>¡Por que nuestra voz es tu voz!</p>
     </header>
 
@@ -105,7 +127,10 @@
     <!-- Sección Inicio -->
     <section id="inicio">
         <h2>Bienvenidos</h2>
-        <p>Somos la Terna que contiene propuestas de estudiantes para estudiantes. ¡Tu voz cuenta con nosotros!</p>
+        <p>Somos la Terna que contiene propuestas de estudiantes para estudiantes.</p>
+        <p>Recuerda que <b>tu voz y opinion es lo mas importante para nosotros</b>, si tienes algun
+             tipo de sugerencia o recomendacion al final de esta pagina encontraras un link con el cual 
+             podras comunicarte con nosotros; y recuerda... <b>¡Tu voz cuenta con nosotros!</b></p>
     </section>
 
     <!-- Sección Sobre Nosotros -->
@@ -137,6 +162,9 @@
     <!-- Sección Propuestas -->
     <section id="propuestas">
         <h2>Nuestras Propuestas</h2>
+        <p>Somos una terna que contiene <b>varias propuestas</b>, por lo que en esta seccion solo
+        se mencionaran algunas de ellas; el resto de propuestas detalladas 
+        estarán en nuestro <b>Plan de Gobierno</b> mas abajo en esta misma pagina.</p>
         <ul>
             <li>Propuesta 1: </li>
             <li>Propuesta 2: </li>
@@ -184,22 +212,38 @@
                 <p>Representante 11-1</p>
             </div>
         </div>
+        <div class="team-member">
+            <div>
+                <h3>Luisa Fernanda Realpe Agudelo</h3>
+                <p>Lider SOYED y estudiante 11-1</p>
+            </div>
+        </div>
     </section>
 
     <!-- Sección Plan de Gobierno -->
     <section id="plan">
         <h2>Plan de Gobierno</h2>
-        <p>Nuestro plan de gobierno ...</p>
-        <ol>
-            <li>Tralalero tralala</li>
-        </ol>
+        <p>Nuestro plan de gobierno extendido con detalles se encuentra en el siguiente link de google drive:</p>
+        <ul>
+            <li><a href="https://docs.google.com/document/d/116vJPOEk8gvw6vjgxErE4iYJSX7sS2EbPGO2b9T9Va0/edit?usp=sharing" 
+                target="_blank">Plan de Gobierno Terna #04</a></li>
+        </ul>
     </section>
 
     <!-- Sección Contacto -->
     <section id="contacto">
         <h2>Contacto</h2>
-        <p>¡Escríbenos y únete a nuestra causa!</p>
+        <p>¡Escríbenos a traves del siguiente link tus propuestas!
+             <a href="https://forms.gle/PujJXPEjBWCTPEE79" target="_blank">Sugerencia de propuestas</a></p>
+        <p>Si deseas, tambien puedes acercarte a cualquiera de la terna y hablar 
+            sobre tus sugerencias, reclamos, quejas, etc.</p>
     </section>
+
+    <!-- Logoooooooooo gigante porq si -->
+    <section id="logo-section">
+        <img src="logo.png" alt="Logo de la Terna" style="width: 100%; height: auto;">
+    </section>
+    
 
     <!-- Pie de Página -->
     <footer>
@@ -208,4 +252,3 @@
 
 </body>
 </html>
-
