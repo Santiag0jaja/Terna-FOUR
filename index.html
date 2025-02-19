@@ -276,61 +276,78 @@
     <section id="formula">
         <h2>Compañeros de Fórmula 👫</h2>
         <p>Conoce a los miembros que acompañan nuestra iniciativa:</p>
-        <div class="team-member">
-            <div>
-                <h3>✅ - Valentina Giraldo Lezcano</h3>
-                <p>Estudiante 11-1</p>
+        <button onclick="toggleFormula()" style="margin-bottom: 10px; padding: 8px 12px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">
+            🔽 Mostrar/Ocultar
+        </button>
+        <div id="formula-content" style="display: none;">
+            <div class="team-member">
+                <div>
+                    <h3>✅ - Valentina Giraldo Lezcano</h3>
+                    <p>Estudiante 11-1</p>
+                </div>
             </div>
-        </div>
-        <div class="team-member">
-            <div>
-                <h3>✅ - Johan Sneyder Querubín Ramírez</h3>
-                <p>Estudiante 11-1</p>
+            <div class="team-member">
+                <div>
+                    <h3>✅ - Johan Sneyder Querubín Ramírez</h3>
+                    <p>Estudiante 11-1</p>
+                </div>
             </div>
-        </div>
-        <div class="team-member">
-            <div>
-                <h3>✅ - Isabela Henao Tabares</h3>
-                <p>Representante 11-2</p>
+            <div class="team-member">
+                <div>
+                    <h3>✅ - Isabela Henao Tabares</h3>
+                    <p>Representante 11-2</p>
+                </div>
             </div>
-        </div>
-        <div class="team-member">
-            <div>
-                <h3>✅ - Valerie Gaviria Sánchez</h3>
-                <p>Estudiante 11-2</p>
+            <div class="team-member">
+                <div>
+                    <h3>✅ - Valerie Gaviria Sánchez</h3>
+                    <p>Estudiante 11-2</p>
+                </div>
             </div>
-        </div>
-        <div class="team-member">
-            <div>
-                <h3>✅ - Valerie López Piedrahita</h3>
-                <p>Mediadora 11-1</p>
+            <div class="team-member">
+                <div>
+                    <h3>✅ - Valerie López Piedrahita</h3>
+                    <p>Mediadora 11-1</p>
+                </div>
             </div>
-        </div>
-        <div class="team-member">
-            <div>
-                <h3>✅ - Michelle Carvajal Álvarez</h3>
-                <p>Representante 11-1</p>
+            <div class="team-member">
+                <div>
+                    <h3>✅ - Michelle Carvajal Álvarez</h3>
+                    <p>Representante 11-1</p>
+                </div>
             </div>
-        </div>
-        <div class="team-member">
-            <div>
-                <h3>✅ - Luisa Fernanda Realpe Agudelo</h3>
-                <p>Líder SOYED y estudiante 11-1</p>
+            <div class="team-member">
+                <div>
+                    <h3>✅ - Luisa Fernanda Realpe Agudelo</h3>
+                    <p>Líder SOYED y estudiante 11-1</p>
+                </div>
             </div>
-        </div>
-        <div class="team-member">
-            <div>
-                <h3>✅ - Valeria Graciano Muñoz</h3>
-                <p>Estudiante 11-2</p>
+            <div class="team-member">
+                <div>
+                    <h3>✅ - Valeria Graciano Muñoz</h3>
+                    <p>Estudiante 11-2</p>
+                </div>
             </div>
-        </div>
-        <div class="team-member">
-            <div>
-                <h3>✅ - Katherine Giraldo Lezcano</h3>
-                <p>Estudiante 11-1</p>
+            <div class="team-member">
+                <div>
+                    <h3>✅ - Katherine Giraldo Lezcano</h3>
+                    <p>Estudiante 11-1</p>
+                </div>
             </div>
         </div>
     </section>
+    
+    <script>
+    function toggleFormula() {
+        var content = document.getElementById("formula-content");
+        if (content.style.display === "none" || content.style.display === "") {
+            content.style.display = "block";
+        } else {
+            content.style.display = "none";
+        }
+    }
+    </script>
+    
 
     <section id="redes">
         <h2>Nuestras Redes 📱 </h2>
